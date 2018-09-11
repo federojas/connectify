@@ -106,6 +106,7 @@ h2{
   font-family: Tahoma;
   font-size: 20px;
   letter-spacing: 1px;
+text-align:center;
 }
 
 .segundo div a{
@@ -133,7 +134,6 @@ a {
   justify-content: flex-end;
   align-items: flex-start;
   background-color: #F3F2F2;
-  flex-wrap: nowrap;
 }
 
 .grow{
@@ -241,9 +241,7 @@ a.fut {
     margin-right: 0%;
   }
 
-	.tercero{
-  	flex-wrap: nowrap;
-	}
+	
 
 }
 
@@ -257,8 +255,6 @@ a.fut {
   .segundo div a{
     margin-right: 0%;
   }
-	.tercero{
-		flex-wrap:wrap;
-	}
+
 
 }
