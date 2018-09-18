@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran|Rokkitt" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Rokkitt" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i" rel="stylesheet">
 
     <title>
@@ -16,7 +16,7 @@
   <body>
 
     <header class="header">
-    	<h1 class="logo"><a href="#">Connectify.</a></h1>
+    	<h1 class="logo"><a href="#">Connectify</a></h1>
       <ul class="main-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
