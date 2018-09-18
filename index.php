@@ -18,10 +18,10 @@
     <header class="header">
     	<h1 class="logo"><a href="#">Connectify</a></h1>
       <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="registration.php">Registration</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
     </header>
 
