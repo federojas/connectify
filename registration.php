@@ -23,7 +23,9 @@ if ($_POST) {
 $usuario = armarUsuario();
 crearUsuario($usuario);
 
-
+//GUARDAR LA FOTO
+$ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["email"] . "." . $ext);
 
     // Redirigir a la home
   header("location:index.php");exit;
