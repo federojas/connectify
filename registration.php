@@ -1,49 +1,14 @@
 <?php
 
-function validarUsuario(){
-$errores = [];
 
-if (strlen($_POST["nombre"]) == 0) {
-    $errores[] = "Ey, dejaste el nombre de usuario vacío";
-  }  else if (ctype_alpha($_POST["nombre"]) == false)  {
-    $errores[] = "El nombre de usuario tienen que ser solo letras";
-  }
 
-  if (strlen($_POST["apellido"]) == 0) {
-      $errores[] = "Dejaste el apellido vacío";
-    }
-    else if (ctype_alpha($_POST["apellido"]) == false)  {
-      $errores[] = "El apellido tiene que ser solo letras";
-    }
-
-  if (strlen($_POST["email"]) == 0 ){
-    $errores[] = "Dejaste el email vacío";
-  }
-  else if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
-    $errores[] = "El email es incorrecto";
-  }
-
-  if (strlen($_POST["contrasenia"]) == 0) {
-      $errores[] = "Ey, dejaste la contra vacía";
-    } else if (strlen($_POST["contrasenia"])<5){
-      $errores[] = "Tu contraseña debe tener mas de 5 caracteres!";
-    }
-
-    if ($_POST["contrasenia"]!= $_POST["repetircontrasenia"]){
-      $errores[]= "Tus contrasenias no son iguales!";
-    }
-    if(!isset($_POST["condiciones"])){
-      $errores[]= "Debes aceptar terminos y condiciones";
-    }
-
-  return $errores;
-}
-
+include_once "funciones.php";
 
 $usernameDefault = "";
 $apellidoDefault = "";
 $emailDefault = "";
 
+$errores=[];
 if ($_POST) {
   $usernameDefault = $_POST["nombre"];
   $apellidoDefault = $_POST["apellido"];
@@ -55,6 +20,10 @@ if ($_POST) {
 
   if (empty($errores)) {
     // Registrarlo
+$usuario = armarUsuario();
+crearUsuario($usuario);
+
+
 
     // Redirigir a la home
   header("location:index.php");exit;
@@ -97,7 +66,7 @@ if ($_POST) {
               <?php endforeach; ?>
             </ul>
 <h1 class="h1RL">REGISTRATE</h1>
-<form class="formulario" action="" method="post">
+<form class="formulario" action="" method="post" enctype="multipart/form-data">
     <div class="Data">
     <label for="nombre"><h6>Nombre</h6></label>
     <input class="input_texto" type="text" name="nombre" value="<?=$usernameDefault?>" required>
@@ -147,6 +116,7 @@ if ($_POST) {
     <div class="Data">
     <label class="genero" for="condiciones">Acepto los Terminos y Condiciones</label>
     <input class="seleccion" type="checkbox" name="condiciones" value="condiciones" required>
+    <input type="file" name="avatar" value="avatar">
     </div>
     <div class="input">
           <button class="button" type="submit" name="registrarme">Registrarme</button>

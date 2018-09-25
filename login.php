@@ -24,7 +24,7 @@
       <div class="titulo">
         <h1 class="h1RL">BIENVENIDO</h1>
       </div>
-<form class="formulario" action="index.html" method="post">
+<form class="formulario" action="index.php" method="post">
 <div class="input">
   <h4>Email</h4>
 <input class="caja" type="email" name="email" value="">
