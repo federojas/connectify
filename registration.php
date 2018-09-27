@@ -50,15 +50,7 @@ move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["email"] . "."
   <title>Connectify.</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="logo"><a href="#">Connectify.</a></h1>
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="registration.html">Registration</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </header>
+  <?php   include_once "nav.php" ?>
     <section>
       <ul style="color:red">
               <?php foreach ($errores as $error) : ?>

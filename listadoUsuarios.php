@@ -17,7 +17,9 @@ $usuarios = traerUsuario();
 <ul>
   <?php foreach ($usuarios as $key => $usuario) : ?>
     <li>
+      <a href="detalleUsuario.php?id=<?php echo  $usuario["id"] ?>">
 <?php echo $usuario["nombre"] . " " . $usuario["apellido"]  ?>
+      </a>
    </li>
 <?php endforeach; ?>
 </ul>
