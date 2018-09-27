@@ -1,4 +1,59 @@
 <?php
+session_start();
+
+//FUNCIONES PARA EL LOGIN//
+function validarLogin($datos){
+  $errores=[];
+
+
+  if($datos["email"]==""){
+    $errores["email"]="Dejaste vacio el email";
+  }
+  else if(!filter_var($datos["email"], FILTER_VALIDATE_EMAIL)){
+    $errores["email"]= "El email no es un email";
+  }
+  else{
+    $usuario = buscarPorEmail($datos["email"]);
+    if($usuario == null){
+    $errores["email"] = "El email no existe";
+    }
+  }
+  if($datos["password"]==""){
+    $errores["password"] = "Dejaste la contrasenia vacia";
+  }
+    else{
+      $usuario = buscarPorEmail($datos["email"]);
+      if($usuario != null){
+        if(password_verify($datos["password"], $usuario["password"]) == false){
+          $errores["password"]="Contrasenia incorrecta";
+      }
+    }
+  }
+
+return $errores;
+}
+
+
+function loguear($email){
+  $_SESSION["usuarioLogueado"] = $email;
+}
+
+function estaLogueado(){
+  if(isset($_SESSION["usuarioLogueado"])){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function traerUsuarioLogueado(){
+  $usuario = buscarPorEmail($_SESSION["usuarioLogueado"]);
+  return $usuario;
+}
+
+
+
+
 
 function buscarPorId($id){
   $usuarios = file_get_contents("usuarios.json");

@@ -1,3 +1,29 @@
+<?php
+require_once("funciones.php");
+
+if(estaLogueado()){
+  header("location:index.php");exit;
+}
+
+//SI VINO POR POST
+
+
+if ($_POST) {
+
+  $errores = validarLogin($_POST);
+
+  var_dump($errores);exit;
+
+  if(empty($errores)){
+    loguear($_POST["email"]);
+    header("location:indep.php");exit;
+  }
+  var_dump($errores);
+
+}
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,7 +42,7 @@
       <div class="titulo">
         <h1 class="h1RL">BIENVENIDO</h1>
       </div>
-<form class="formulario" action="index.php" method="post">
+<form class="formulario" action="login.php" method="post">
 <div class="input">
   <h4>Email</h4>
 <input class="caja" type="email" name="email" value="">
@@ -25,7 +51,7 @@
 
   <div class="input">
     <h4>Contraseña</h4>
-  <input class="caja" type="password" name="pass" value="">
+  <input class="caja" type="password" name="password" value="">
   <h3>¿Has olvidado tu contraseña?<h3>
     </div>
     <div class="recordar">
@@ -39,19 +65,6 @@
 </div>
 </div>
     </section>
-    <footer class="social-footer">
-      <div class="social-footer-left">
-        <!-- <a href="#"><img class="logo" src="https://placehold.it/150x30"></a> -->
-        <h1 class="logo"><a href="#">Connectify.</a></h1>
-      </div>
-      <div class="social-footer-icons">
-        <ul class="menu simple">
-          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook" ></i></a></li>
-          <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-          <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
-    </footer>
+    <?php include_once("footer.php") ?>
   </body>
 </html>

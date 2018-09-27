@@ -118,19 +118,6 @@ move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["email"] . "."
           </div>
   </form>
           </section>
-          <footer class="social-footer">
-            <div class="social-footer-left">
-              <!-- <a href="#"><img class="logo" src="https://placehold.it/150x30"></a> -->
-              <h1 class="logo"><a href="#">Connectify.</a></h1>
-            </div>
-            <div class="social-footer-icons">
-              <ul class="menu simple">
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook" ></i></a></li>
-                <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </footer>
+        <?php include_once("footer.php") ?>
   </body>
 </html>
