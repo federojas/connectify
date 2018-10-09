@@ -63,27 +63,27 @@ move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["email"] . "."
 <form class="formulario" action="" method="post" enctype="multipart/form-data">
     <div class="Data">
     <label for="nombre"><h6>Nombre</h6></label>
-    <input class="input_texto" type="text" name="nombre" value="<?=$usernameDefault?>" required>
+    <input class="input_texto" type="text" name="nombre" value="<?=$usernameDefault?>" id="input" required>
     <h5>Obligatorio.<h5>
       </div>
       <div class="Data">
     <label for="nombre"><h6>Apellido</h6></label>
-    <input class="input_texto" type="text" name="apellido" value="" required>
+    <input class="input_texto" type="text" name="apellido" value="" id="input" required>
     <h5>Obligatorio.<h5>
       </div>
       <div class="Data">
     <label for="email"><h6>Email</h6></label>
-    <input class="input_texto" type="email" name="email" value="" required>
+    <input class="input_texto" type="email" name="email" value="" id="input" required>
     <h5>Obligatorio.<h5>
       </div>
       <div class="Data">
     <label for="contraseña"><h6>Contraseña</h6></label>
-    <input class="input_texto" type="password" name="contrasenia" value="" required>
+    <input class="input_texto" type="password" name="contrasenia" value="" id="input" required>
     <h5>Obligatorio.<h5>
       </div>
       <div class="Data">
       <label for="nombre"><h6>Repetir Contraseña</h6></label>
-      <input class="input_texto" type="password" name="repetircontrasenia" value="" required>
+      <input class="input_texto" type="password" name="repetircontrasenia" value="" id="input" required>
       <h5>Obligatorio.<h5>
         </div>
         <div class="Data">

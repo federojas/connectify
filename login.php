@@ -16,6 +16,13 @@ if ($_POST) {
 
   if(empty($errores)){
     loguear($_POST["email"]);
+
+    if (isset($_POST["recordarme"])) {
+      $year = time() + 31536000;
+      setcookie("recordar", $_POST["email"], $year);
+    }
+
+
     header("location:indep.php");exit;
   }
   var_dump($errores);
@@ -45,17 +52,18 @@ if ($_POST) {
 <form class="formulario" action="login.php" method="post">
 <div class="input">
   <h4>Email</h4>
-<input class="caja" type="email" name="email" value="">
+<input class="caja" type="email" name="email" value="" id="input">
 <h3>¿Has olvidado tu correo electronico?<h3>
   </div>
 
   <div class="input">
     <h4>Contraseña</h4>
-  <input class="caja" type="password" name="password" value="">
+  <input class="caja" type="password" name="password" value="" id="input">
   <h3>¿Has olvidado tu contraseña?<h3>
     </div>
     <div class="recordar">
-      <input class="checkbox" type="checkbox" name="recordarme" value="recordarme"> <p id="recordarlo">Recordarme</p> <br>
+      <input class="checkbox" type="checkbox" name="recordarme" value="recordado"> <p id="recordarlo">Recordarme</p> <br>
+
     </div>
       <div class="input">
     <input type="submit" name="aceptar" class="boton" value="Login">
