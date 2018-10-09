@@ -314,7 +314,7 @@ margin-left: 10px;
 margin-top: 0px;
  color: #111;
  font-family: 'Open Sans', sans-serif;
- font-size: 40px;
+ font-size: 30px;
  font-weight: 300;
  line-height: 32px;
  text-align: center;
@@ -322,7 +322,7 @@ margin-bottom: 10px;}
 
 .h1RL {
 margin: 0 auto;
-font-size: 60px;
+font-size: 35px;
 width: 100%;
 color: #111;
 font-family: 'Helvetica Neue', sans-serif;
@@ -341,7 +341,7 @@ h5{
  font-size: 15px;
 }
 h6{
- font-size: 25px;
+ font-size: 30px;
  color: black;
 }
 #input{
