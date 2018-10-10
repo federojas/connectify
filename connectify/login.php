@@ -48,7 +48,7 @@
   </head>
 
   <body>
-    <?php  include_once("nav.php") ?>
+    <?php require_once("nav.php") ?>
     <section>
       <div class="todo">
         <div class="container">
@@ -67,7 +67,9 @@
               <h3>¿Has olvidado tu contraseña?<h3>
             </div>
             <div class="recordar">
-              <input class="checkbox" type="checkbox" name="recordarme" value="recordado"> <p id="recordarlo">Recordarme</p> <br>
+              <input class="checkbox" type="checkbox" name="recordarme" value="recordado">
+              <p id="recordarlo">Recordarme</p>
+
             </div>
             <div class="input">
               <input type="submit" name="aceptar" class="boton" value="Login">
@@ -77,6 +79,6 @@
         </div>
       </div>
     </section>
-    <?php include_once("footer.php") ?>
+    <?php require_once("footer.php") ?>
   </body>
 </html>

@@ -48,6 +48,6 @@
           <img src="images/encontrar.jpg" alt="">
         </div>
     </section>
-<?php   include_once "footer.php" ?>
+    <?php  require_once("footer.php") ?>
   </body>
 </html>

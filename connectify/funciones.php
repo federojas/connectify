@@ -1,6 +1,5 @@
 <?php
 
-
 session_start();
 
 //FUNCIONES PARA EL LOGIN//
@@ -29,7 +28,6 @@ function validarLogin($datos){
   }
   return $errores;
 }
-
 
 
 function loguear($email){
@@ -76,7 +74,6 @@ function proximoId(){
 }
 
 
-
 function armarUsuario(){
   return [
     "id"=> proximoId(),
@@ -106,14 +103,11 @@ function crearUsuario($usuario){
 
 
 
-
 function traerUsuario(){
   $usuarios = file_get_contents("usuarios.json");
   $usuarios = json_decode($usuarios, true);
   return $usuarios;
 }
-
-
 
 
 function validarUsuario(){

@@ -12,7 +12,6 @@
     $apellidoDefault = $_POST["apellido"];
     $emailDefault = $_POST["email"];
 
-
     // Validar al  usuario
     $errores = validarUsuario();
 
@@ -42,7 +41,7 @@
     <title>Connectify.</title>
   </head>
   <body>
-    <?php   include_once "nav.php" ?>
+    <?php require_once("nav.php") ?>
       <section>
         <div class="muestro_errores">
           <ul style="color:red">
@@ -112,6 +111,6 @@
           </div>
         </form>
       </section>
-      <?php include_once("footer.php") ?>
+      <?php require_once("footer.php") ?>
     </body>
 </html>
