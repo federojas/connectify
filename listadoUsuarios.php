@@ -1,10 +1,7 @@
 <?php
-include_once "funciones.php";
-$usuarios = traerUsuario();
-
-
- ?>
-
+  require_once("funciones.php");
+  $usuarios = traerUsuario();
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,21 +10,15 @@ $usuarios = traerUsuario();
     <title></title>
   </head>
   <body>
-<h1>Mis Usuarios</h1>
-<ul>
-  <?php foreach ($usuarios as $key => $usuario) : ?>
-    <li>
-      <a href="detalleUsuario.php?id=<?php echo  $usuario["id"] ?>">
-<?php echo $usuario["nombre"] . " " . $usuario["apellido"]  ?>
-      </a>
-   </li>
-<?php endforeach; ?>
-</ul>
-
-
-
-
-
-
+    <h1>Usuarios de Connectify.</h1>
+    <ul>
+      <?php foreach ($usuarios as $key => $usuario) : ?>
+      <li>
+        <a href="detalleusuario.php?id=<?php echo  $usuario["id"] ?>">
+        <?php echo $usuario["nombre"] . " " . $usuario["apellido"]  ?>
+        </a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
   </body>
 </html>

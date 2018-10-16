@@ -75,23 +75,23 @@ div.primero{
   background-position: left top;
 }
 
-h2{
-    padding-left: 1%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
-    margin-top: 5%;
-    font-size: 30px;
-    text-align: center;
-    color: #DFDCDC;
-    background-color: rgba(0,0,0,0.3);
-    display: block;
-    font-family: sans-serif;
-    line-height: 1.3;
-    margin-right: 20%;
-    float: left;
-    letter-spacing: 3px;
-    font-style: italic;
+h2 {
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  margin-top: 5%;
+  font-size: 30px;
+  text-align: center;
+  color: #DFDCDC;
+  background-color: rgba(0,0,0,0.3);
+  display: block;
+  font-family: sans-serif;
+  line-height: 1.3;
+  margin-right: 20%;
+  float: left;
+  letter-spacing: 3px;
+  font-style: italic;
 }
 
 .primero{
@@ -106,7 +106,7 @@ h2{
   font-family: Tahoma;
   font-size: 20px;
   letter-spacing: 1px;
-text-align:center;
+	text-align:center;
 }
 
 .segundo div a{
@@ -248,7 +248,7 @@ a.fut {
 	margin-bottom: 10px;
 }
 .boton{
-	background-color: #4CAF50;
+background-color: grey;
 font-size: 20px;
 border: none;
 padding: 20px;
@@ -294,7 +294,8 @@ select{
 	font-size: 20px;
 }
 .button{
-	background-color: #4CAF50;
+/*background-color: #4CAF50;*/
+background-color: grey;
 font-size: 20px;
 border: none;
 padding: 20px;
@@ -309,26 +310,27 @@ border-radius: 5px;
 h4 {
 	width: 98%;
 	padding: 10px;
-padding-top: 0px;
-margin-left: 10px;
-margin-top: 0px;
- color: #111;
- font-family: 'Open Sans', sans-serif;
- font-size: 30px;
- font-weight: 300;
- line-height: 32px;
- text-align: center;
-margin-bottom: 10px;}
+	padding-top: 0px;
+	margin-left: 10px;
+	margin-top: 0px;
+ 	color: #111;
+ 	font-family: 'Open Sans', sans-serif;
+ 	font-size: 30px;
+ 	font-weight: 300;
+ 	line-height: 32px;
+ 	text-align: center;
+	margin-bottom: 10px;
+}
 
 .h1RL {
-margin: 0 auto;
-font-size: 35px;
-width: 100%;
-color: #111;
-font-family: 'Helvetica Neue', sans-serif;
-font-weight: bold;
-letter-spacing: -1px;
- line-height: 1;
+	margin: 0 auto;
+	font-size: 35px;
+	width: 100%;
+	color: #812617;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
 	margin-top: 10px;
 	text-align: center;
 	margin-bottom: 10px;

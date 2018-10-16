@@ -14,7 +14,9 @@
   </head>
 
   <body>
-    <?php   include_once "nav.php" ?>
+    <?php
+    require_once("nav.php");
+    ?>
     <section>
         <div class="main">
 
@@ -46,6 +48,6 @@
           <img src="images/encontrar.jpg" alt="">
         </div>
     </section>
-<?php   include_once "footer.php" ?>
+    <?php  require_once("footer.php") ?>
   </body>
 </html>
