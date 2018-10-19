@@ -7,7 +7,7 @@
 
   $id = $_GET["id"];
   $usuario = buscarPorId($id);
-  $foto = glob("img/" . $usuario["email"] . "*")[0];
+  $foto = glob("img/" . $usuario["nombrefoto"])[0];
 ?>
 
 <!DOCTYPE html>
@@ -26,14 +26,21 @@
     <section>
       <div class="container">
         <div class="titulo">
+          <br>
           <h1 class="h1RL">Mi Perfil</h1>
         </div>
             <ul>
               <li>Nombre: <?=$usuario["nombre"]?></li>
               <li>Apellido: <?=$usuario["apellido"]?></li>
               <li>Email: <?=$usuario["email"]?></li>
-              <li>Género: <?=$usuario["genero"]?></li>
-              <li>País: <?=$usuario["pais"]?></li>
+              <li>Género: <?=($usuario["genero"] === "m") ? "Masculino" : "Femenino"?></li>
+
+              <?php
+              $paises = ["Argentina","Bolivia","Brasil","Uruguay","Alemania","Inglaterra","España","Francia", "Japón", "Otros"];
+              $paises[$usuario["pais"]]
+              ?>
+
+              <li>País: <?=$paises[$usuario["pais"]]?></li>
             </ul>
             <br>
             <img width="200" src="<?=$foto?>" alt="">

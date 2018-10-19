@@ -9,17 +9,10 @@
   if ($_POST) {
     $errores = validarLogin($_POST);
 
-    /* var_dump($errores);exit; */
+    $emailDefault = $_POST["email"];
+    $passwordDefault = $_POST["password"];
+
     ?>
-    <div class="muestro_errores">
-      <ul style="color:red">
-        <?php foreach ($errores as $error) : ?>
-          <li>
-            <?=$error?>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
 
     <?php
     if(empty($errores)){
@@ -53,29 +46,47 @@
       <div class="todo">
         <div class="container">
           <div class="titulo">
-            <h1 class="h1RL">BIENVENIDO</h1>
+            <br>
+            <br>
+            <h1 class="h1RL">INGRESAR</h1>
+            <br>
           </div>
           <form class="formulario" action="login.php" method="post">
             <div class="input">
-              <h4>Email</h4>
-              <input class="caja" id="input" type="email" name="email" value="">
-              <h3>¿Has olvidado tu correo electronico?<h3>
+              <?php if (isset($errores["email"])) : ?>
+                <input class="error caja" id="input" placeholder=" Email *" type="email" name="email" value="<?=$emailDefault?>">
+                <p class="mensaje-error">
+                  <?=$errores["email"]?>
+                </p>
+              <?php else : ?>
+                <input class="caja" id="input" placeholder=" Email *" type="email" name="email" value="">
+                <h3>¿Has olvidado tu correo electronico?<h3>
+              <?php endif; ?>
             </div>
-            <div class="input">
-              <h4>Contraseña</h4>
-              <input class="caja" id="input" type="password" name="password" value="">
-              <h3>¿Has olvidado tu contraseña?<h3>
-            </div>
-            <div class="recordar">
-              <input class="checkbox" type="checkbox" name="recordarme" value="recordado">
-              <p id="recordarlo">Recordarme</p>
 
+
+            <div class="input">
+              <?php if (isset($errores["password"])) : ?>
+                <input class="error caja" id="input" placeholder=" Contraseña *" type="password" name="password" value="">
+                <p class="mensaje-error">
+                  <?=$errores["password"]?>
+                </p>
+              <?php else : ?>
+                <input class="caja" id="input" placeholder=" Contraseña *" type="password" name="password" value="">
+                <h3>¿Has olvidado tu contraseña?<h3>
+              <?php endif; ?>
+            </div>
+
+            <div class="recordar">
+              <label class="genero" for="condiciones">Recordarme</label>
+              <input class="seleccion" type="checkbox" name="recordarme"  value="recordado">
             </div>
             <div class="input">
               <input type="submit" name="aceptar" class="boton" value="Login">
               <input type="reset" name="cancelar" class="boton" value="Cancelar">
             </div>
           </form>
+          <br>
         </div>
       </div>
     </section>

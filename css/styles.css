@@ -142,6 +142,16 @@ flex-grow:1;
 }
 
 
+.error {
+	border: 1px solid red;
+	background-color: rgba(255, 122, 122, 0.43);
+}
+
+.mensaje-error {
+	color: red;
+	font-size: 12pxl;
+}
+
 /* HEADER */
 ul {
   margin: 0;
@@ -185,7 +195,6 @@ ul {
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	border-radius: 5px;
 }
-
 
 /* FOOTER */
 .social-footer {
@@ -261,7 +270,10 @@ border-radius: 5px;
 margin-bottom: 10px;
 }
 #recordarlo{
-	font-size: 20px;
+	font-size: 23px;
+	color: grey;
+	vertical-align: middle;
+	font-family: 'Open Sans', sans-serif;
 }
 .recordar{
 	width: 40%;
@@ -277,22 +289,30 @@ margin-right: 30%
 	color: red;
 	font-size: 15px;
 }
+
 .input_texto{
 	width: 500px;
 	height: 50px;
 	border: 2px solid grey;
+	font-size: 23px;
+	color: grey;
+	font-family: 'Open Sans', sans-serif;
 }
+
 select{
 	width: 500px;
 	height: 50px;
+	color: grey;
 }
-.seleccion{
-	width: 30px;
-	height: 30px;
-}
+
 .genero{
-	font-size: 20px;
+	font-size: 24px;
+	color: grey;
+	font-family: 'Open Sans', sans-serif;
+	vertical-align: middle;
 }
+
+
 .button{
 /*background-color: #4CAF50;*/
 background-color: grey;
@@ -348,22 +368,25 @@ h6{
 }
 #input{
 	font-size: 24px;
+	color:grey;
 }
 select{
  width: 500px;
  height: 50px;
+ color: grey;
 }
 .seleccion{
  width: 30px;
  height: 30px;
+ vertical-align: middle;
 }
-.genero{
- font-size: 20px;
-}
+
 .Data{
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
+	color: grey;
+	font-size: 23;
 }
 .input{
 	width: 100%;
