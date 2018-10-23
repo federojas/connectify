@@ -58,8 +58,8 @@ function armarUsuario(){
     "fecnac"=>trim($_POST["fecnac"]),
     "pais"=>$_POST["pais"],
     "genero"=>$_POST["sexo"],
-    "nombrefoto"=>$_POST["email"] . ".jpg"
-    ];
+    "nombrefoto"=>$_POST["email"] . "." .pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION)
+  ];
 }
 
 
@@ -81,6 +81,10 @@ function crearUsuario($usuario){
   $consulta->bindValue(":created_at", $now);
   $consulta->bindValue(":updated_at", $now);
   $consulta->execute();
+  $id = $db->lastInsertId();
+  $usuario["id"] = $id;
+
+  return $usuario;
 }
 
 function loguear($email){

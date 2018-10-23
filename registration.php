@@ -17,20 +17,16 @@
     $apellidoDefault = $_POST["apellido"];
     $emailDefault = $_POST["email"];
     $fecnacDefault = $_POST["fecnac"];
-    //$paisDefault = $_POST["pais"];
-    //$sexoDefault = $_POST["sexo"];
 
     if (empty($errores)) {
       // Registrarlo
       $usuario = armarUsuario();
-      crearUsuario($usuario);
+      $usuario = crearUsuario($usuario);
 
       //GUARDAR LA FOTO
-      $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-      move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["email"] . "." . $ext);
-
-
+      move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["nombrefoto"]);
       // Redirigir a la home
+      
       header("location:index.php");exit;
     }
   }
